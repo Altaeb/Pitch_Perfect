@@ -73,5 +73,14 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             stopRecordButton.isEnabled = false
         }
     }
+    
+    // Notifies the view controller that a segue is about to be performed.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "stopRecordingSegue" {
+            let playAudioVC = segue.destination as? PlaySoundsViewController
+            let recordedAudioURL = sender as? URL
+            playAudioVC?.recordedAudioURL = recordedAudioURL
+        }
+    }
 }
 
