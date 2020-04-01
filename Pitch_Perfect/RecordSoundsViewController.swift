@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RecordSoundsViewController.swift
 //  Pitch_Perfect
 //
 //  Created by Abdalfattah Altaeb on 4/1/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RecordSoundsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
