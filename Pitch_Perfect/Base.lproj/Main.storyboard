@@ -28,27 +28,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ob1-KF-Gqw" userLabel="Stop Record Button">
-                                <rect key="frame" x="155" y="460" width="65" height="65"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04j-0k-Zea" userLabel="Stop Record Button">
+                                <rect key="frame" x="155.5" y="469.5" width="64" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="RZS-7a-CLR"/>
-                                    <constraint firstAttribute="width" constant="65" id="zWj-U9-6JR"/>
+                                    <constraint firstAttribute="width" constant="64" id="LVK-hA-Rj6"/>
+                                    <constraint firstAttribute="height" constant="64" id="lgm-Kb-AyN"/>
                                 </constraints>
-                                <state key="normal" title="Tap to Record" image="Stop"/>
+                                <state key="normal" image="Stop"/>
                                 <connections>
-                                    <action selector="stopRecordButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D1K-Hl-jg2"/>
+                                    <action selector="stopRecordButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZxI-DQ-QPX"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ob1-KF-Gqw" secondAttribute="trailing" symbolic="YES" id="9gI-gy-yqJ"/>
+                            <constraint firstItem="04j-0k-Zea" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EWd-pQ-T7r"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wcr-QW-odk" secondAttribute="trailing" symbolic="YES" id="FEa-b8-s9Q"/>
-                            <constraint firstItem="ob1-KF-Gqw" firstAttribute="top" secondItem="wcr-QW-odk" secondAttribute="bottom" constant="8" id="HJG-V2-mNI"/>
-                            <constraint firstItem="wcr-QW-odk" firstAttribute="leading" secondItem="ob1-KF-Gqw" secondAttribute="leading" constant="-21" id="JFq-TG-hbt"/>
+                            <constraint firstItem="04j-0k-Zea" firstAttribute="centerX" secondItem="wcr-QW-odk" secondAttribute="centerX" id="WDL-xv-OV2"/>
                             <constraint firstItem="wcr-QW-odk" firstAttribute="leading" secondItem="gK8-iz-6PE" secondAttribute="leading" constant="24" id="bJZ-0E-w6J"/>
                             <constraint firstItem="wcr-QW-odk" firstAttribute="top" secondItem="gK8-iz-6PE" secondAttribute="bottom" constant="-2" id="cXP-Mb-AlG"/>
                             <constraint firstItem="gK8-iz-6PE" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ddU-qb-3Q3"/>
+                            <constraint firstItem="wcr-QW-odk" firstAttribute="top" secondItem="04j-0k-Zea" secondAttribute="bottom" constant="-102.5" id="f2N-T9-aXR"/>
                             <constraint firstItem="gK8-iz-6PE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="x78-MI-cWz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -57,7 +57,7 @@
                     <connections>
                         <outlet property="recordButton" destination="gK8-iz-6PE" id="CQL-Hr-C22"/>
                         <outlet property="recordingLabel" destination="wcr-QW-odk" id="jEG-AX-DGn"/>
-                        <outlet property="stopRecordButton" destination="ob1-KF-Gqw" id="fdN-GZ-Hn5"/>
+                        <outlet property="stopRecordButton" destination="04j-0k-Zea" id="KM3-8H-fAU"/>
                         <segue destination="yK9-zT-xgM" kind="show" identifier="stopRecordingSegue" id="Jfv-7i-VZx"/>
                     </connections>
                 </viewController>
@@ -117,25 +117,22 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQH-e8-oiE" userLabel="Stop Record Button">
-                                <rect key="frame" x="155" y="594" width="65" height="65"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwa-1c-CeZ" userLabel="Stop Record Button">
+                                <rect key="frame" x="155.5" y="595" width="64" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="G9s-Qe-jxi"/>
-                                    <constraint firstAttribute="width" constant="65" id="l2D-Hd-8xg"/>
+                                    <constraint firstAttribute="height" constant="64" id="0fC-Zj-4Mb"/>
+                                    <constraint firstAttribute="width" constant="64" id="KxC-Hz-q5A"/>
                                 </constraints>
-                                <state key="normal" title="Tap to Record" image="Stop"/>
-                                <connections>
-                                    <action selector="stopRecordButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="56M-G4-90R"/>
-                                </connections>
+                                <state key="normal" image="Stop"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="HQH-e8-oiE" firstAttribute="centerX" secondItem="ldN-7H-uUK" secondAttribute="centerX" id="2zJ-Fj-Q3H"/>
-                            <constraint firstItem="ldN-7H-uUK" firstAttribute="bottom" secondItem="HQH-e8-oiE" secondAttribute="bottom" constant="8" id="5q3-Ld-0lo"/>
                             <constraint firstItem="ldN-7H-uUK" firstAttribute="bottom" secondItem="8Zc-hR-709" secondAttribute="bottom" constant="16" id="BIn-7K-yoE"/>
                             <constraint firstItem="8Zc-hR-709" firstAttribute="leading" secondItem="ldN-7H-uUK" secondAttribute="leading" constant="16" id="hXH-dZ-CeR"/>
                             <constraint firstItem="8Zc-hR-709" firstAttribute="top" secondItem="ldN-7H-uUK" secondAttribute="top" id="i1J-Zg-49g"/>
+                            <constraint firstItem="ldN-7H-uUK" firstAttribute="bottom" secondItem="jwa-1c-CeZ" secondAttribute="bottom" constant="8" id="kqh-wq-kiO"/>
+                            <constraint firstItem="jwa-1c-CeZ" firstAttribute="centerX" secondItem="ldN-7H-uUK" secondAttribute="centerX" id="uxl-wj-sMi"/>
                             <constraint firstItem="ldN-7H-uUK" firstAttribute="trailing" secondItem="8Zc-hR-709" secondAttribute="trailing" constant="16" id="xDv-fn-Zdk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ldN-7H-uUK"/>
