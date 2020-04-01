@@ -33,6 +33,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         try! session.setCategory(AVAudioSession.Category.playAndRecord, mode: AVAudioSession.Mode.default, options: AVAudioSession.CategoryOptions.defaultToSpeaker)
 
         try? audioRecorder = AVAudioRecorder(url: filePath!, settings: [:])
+        audioRecorder.delegate = self
         audioRecorder.isMeteringEnabled = true
         audioRecorder.prepareToRecord()
         audioRecorder.record()
@@ -48,6 +49,16 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         configureUI(isRecording: false)
+    }
+    
+    // MARK: - Audio Recorder Delegate
+    // Called by the system when a recording is stopped or has finished due to reaching its time limit.
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+        if flag {
+            performSegue(withIdentifier: "stopRecordingSegue", sender: audioRecorder.url)
+        } else {
+            print("Recording was not successful")
+        }
     }
     
     // Configure the label and buttons

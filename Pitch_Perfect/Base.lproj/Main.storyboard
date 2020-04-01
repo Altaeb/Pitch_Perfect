@@ -58,11 +58,28 @@
                         <outlet property="recordButton" destination="gK8-iz-6PE" id="CQL-Hr-C22"/>
                         <outlet property="recordingLabel" destination="wcr-QW-odk" id="jEG-AX-DGn"/>
                         <outlet property="stopRecordButton" destination="ob1-KF-Gqw" id="fdN-GZ-Hn5"/>
+                        <segue destination="yK9-zT-xgM" kind="show" identifier="stopRecordingSegue" id="Jfv-7i-VZx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1069.5999999999999" y="108.39580209895054"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zo5-Ya-W3q">
+            <objects>
+                <viewController id="yK9-zT-xgM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C4i-9s-0dp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="ldN-7H-uUK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CJz-MW-ZFr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4kM-ye-IHK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1948" y="108"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zsi-0t-4Zc">
