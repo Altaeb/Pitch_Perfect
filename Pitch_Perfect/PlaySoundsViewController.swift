@@ -10,8 +10,16 @@ import UIKit
 import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
-    
+    // MARK: Properties
     var recordedAudioURL: URL!
+    var audioFile: AVAudioFile!
+    var audioEngine: AVAudioEngine!
+    var audioPlayerNode: AVAudioPlayerNode!
+    var stopTimer: Timer!
+    
+    enum ButtonType: Int {
+        case slow, fast, chipmunk, vader, echo, reverb
+    }
     
     // MARK: Outlets
     @IBOutlet weak var slowButton: UIButton!
@@ -22,22 +30,56 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var reverbButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
     // MARK: Actions
     // IBAction for play sound
     @IBAction func playSoundForButton(_ sender: UIButton) {
+        
+        if let buttonType = ButtonType(rawValue: sender.tag) {
+            switch buttonType {
+            case .slow:
+                playSound(rate: 0.5)
+            case .fast:
+                playSound(rate: 1.5)
+            case .chipmunk:
+                playSound(pitch: 1000)
+            case .vader:
+                playSound(pitch: -1000)
+            case .echo:
+                playSound(echo: true)
+            case .reverb:
+                playSound(reverb: true)
+            }
+        }
+
+        configureUI(.playing)
 
     }
 
     // IBAction for stop sound
     @IBAction func stopButtonPressed(_ sender: AnyObject) {
-      
+      stopAudio()
     }
+    
+    // Called after the controller's view is loaded into memory.
+     override func viewDidLoad() {
+        super.viewDidLoad()
+        setupAudio()
+
+        slowButton.imageView?.contentMode = .scaleAspectFit
+        fastButton.imageView?.contentMode = .scaleAspectFit
+        highButton.imageView?.contentMode = .scaleAspectFit
+        lowButton.imageView?.contentMode = .scaleAspectFit
+        echoButton.imageView?.contentMode = .scaleAspectFit
+        reverbButton.imageView?.contentMode = .scaleAspectFit
+        stopButton.imageView?.contentMode = .scaleAspectFit
+    }
+
+    // Notifies the view controller that its view is about to be added to a view hierarchy.
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureUI(.notPlaying)
+    }
+    
     /*
     // MARK: - Navigation
 
