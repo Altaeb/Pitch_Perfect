@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
+    
     // MARK: Properties
     var recordedAudioURL: URL!
     var audioFile: AVAudioFile!
@@ -79,15 +80,5 @@ class PlaySoundsViewController: UIViewController {
         super.viewWillAppear(animated)
         configureUI(.notPlaying)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

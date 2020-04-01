@@ -11,16 +11,16 @@ import AVFoundation
 
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
+    // MARK: Properties
     var audioRecorder: AVAudioRecorder!
     
+    // MARK: Outlets
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var stopRecordButton: UIButton!
     @IBOutlet weak var recordingLabel: UILabel!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
 
+    // MARK: Actions
+    // IBAction for record button
     @IBAction func recordButtonAction(_ sender: Any) {
         configureUI(isRecording: true)
         
@@ -39,6 +39,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.record()
     }
     
+    
     @IBAction func stopRecordButtonAction(_ sender: Any) {
         configureUI(isRecording: false)
         
@@ -47,7 +48,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         try? audioSession.setActive(false)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    // Called after the controller's view is loaded into memory.
+    override func viewDidLoad() {
+        super.viewDidLoad()
         configureUI(isRecording: false)
     }
     
