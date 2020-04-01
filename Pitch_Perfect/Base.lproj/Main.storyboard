@@ -55,7 +55,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="5JO-3I-Qoz"/>
                     <connections>
-                        <outlet property="recordingButton" destination="gK8-iz-6PE" id="Chi-XL-DZU"/>
+                        <outlet property="recordButton" destination="gK8-iz-6PE" id="CQL-Hr-C22"/>
                         <outlet property="recordingLabel" destination="wcr-QW-odk" id="jEG-AX-DGn"/>
                         <outlet property="stopRecordButton" destination="ob1-KF-Gqw" id="fdN-GZ-Hn5"/>
                     </connections>
