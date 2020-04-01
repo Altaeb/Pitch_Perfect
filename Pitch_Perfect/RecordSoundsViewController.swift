@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
 
-class RecordSoundsViewController: UIViewController {
-
+class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
+    
+    var audioRecorder: AVAudioRecorder!
+    
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var stopRecordButton: UIButton!
     @IBOutlet weak var recordingLabel: UILabel!
@@ -20,10 +23,27 @@ class RecordSoundsViewController: UIViewController {
 
     @IBAction func recordButtonAction(_ sender: Any) {
         configureUI(isRecording: true)
+        
+        let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask,true)[0] as String
+        let recordingName = "recordedAudio.wav"
+        let pathArray = [dirPath, recordingName]
+        let filePath = URL(string: pathArray.joined(separator: "/"))
+
+        let session = AVAudioSession.sharedInstance()
+        try! session.setCategory(AVAudioSession.Category.playAndRecord, mode: AVAudioSession.Mode.default, options: AVAudioSession.CategoryOptions.defaultToSpeaker)
+
+        try? audioRecorder = AVAudioRecorder(url: filePath!, settings: [:])
+        audioRecorder.isMeteringEnabled = true
+        audioRecorder.prepareToRecord()
+        audioRecorder.record()
     }
     
     @IBAction func stopRecordButtonAction(_ sender: Any) {
         configureUI(isRecording: false)
+        
+        audioRecorder.stop()
+        let audioSession = AVAudioSession.sharedInstance()
+        try? audioSession.setActive(false)
     }
     
     override func viewDidAppear(_ animated: Bool) {
