@@ -26,6 +26,7 @@
 		B6BC302E24350156008A0FBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6BC303024350156008A0FBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6BC30362435233B008A0FBA /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
+		B6BC303924353124008A0FBA /* PlaySoundsViewController+Swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlaySoundsViewController+Swift.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 		B6BC302124350155008A0FBA /* Pitch_Perfect */ = {
 			isa = PBXGroup;
 			children = (
+				B6BC303824353124008A0FBA /* Extensions */,
 				B6BC302224350155008A0FBA /* AppDelegate.swift */,
 				B6BC302424350155008A0FBA /* SceneDelegate.swift */,
 				B6BC302624350155008A0FBA /* RecordSoundsViewController.swift */,
@@ -68,6 +70,14 @@
 				B6BC30362435233B008A0FBA /* PlaySoundsViewController.swift */,
 			);
 			path = Pitch_Perfect;
+			sourceTree = "<group>";
+		};
+		B6BC303824353124008A0FBA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B6BC303924353124008A0FBA /* PlaySoundsViewController+Swift.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
