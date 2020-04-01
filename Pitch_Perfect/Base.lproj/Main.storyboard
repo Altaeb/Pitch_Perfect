@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Record Sounds View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="Pitch_Perfect" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -18,6 +18,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gK8-iz-6PE" userLabel="Record Button">
                                 <rect key="frame" x="110" y="278" width="155" height="155"/>
                                 <state key="normal" image="RecordButton"/>
+                                <connections>
+                                    <action selector="recordButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mb1-de-XkZ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcr-QW-odk" userLabel="Recording Label">
                                 <rect key="frame" x="134" y="431" width="107" height="21"/>
@@ -32,6 +35,9 @@
                                     <constraint firstAttribute="width" constant="65" id="zWj-U9-6JR"/>
                                 </constraints>
                                 <state key="normal" title="Tap to Record" image="Stop"/>
+                                <connections>
+                                    <action selector="stopRecordButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D1K-Hl-jg2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -48,6 +54,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="5JO-3I-Qoz"/>
+                    <connections>
+                        <outlet property="recordingButton" destination="gK8-iz-6PE" id="Chi-XL-DZU"/>
+                        <outlet property="recordingLabel" destination="wcr-QW-odk" id="jEG-AX-DGn"/>
+                        <outlet property="stopRecordButton" destination="ob1-KF-Gqw" id="fdN-GZ-Hn5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

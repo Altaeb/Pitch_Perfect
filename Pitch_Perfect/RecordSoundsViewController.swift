@@ -10,11 +10,20 @@ import UIKit
 
 class RecordSoundsViewController: UIViewController {
 
+    @IBOutlet weak var recordingButton: UIButton!
+    @IBOutlet weak var stopRecordButton: UIButton!
+    @IBOutlet weak var recordingLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func recordButtonAction(_ sender: Any) {
+        print("This is Record Button")
+    }
+    
+    @IBAction func stopRecordButtonAction(_ sender: Any) {
+        print("Thise is stop Record Button")
+    }
 }
 
