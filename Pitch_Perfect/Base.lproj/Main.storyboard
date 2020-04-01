@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Lw-8x-ZPw">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15508"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,16 +12,42 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gK8-iz-6PE">
+                                <rect key="frame" x="394" y="597" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcr-QW-odk">
+                                <rect key="frame" x="394" y="643" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ob1-KF-Gqw">
+                                <rect key="frame" x="394" y="672" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ob1-KF-Gqw" secondAttribute="trailing" symbolic="YES" id="9gI-gy-yqJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wcr-QW-odk" secondAttribute="trailing" symbolic="YES" id="FEa-b8-s9Q"/>
+                            <constraint firstItem="ob1-KF-Gqw" firstAttribute="top" secondItem="wcr-QW-odk" secondAttribute="bottom" constant="8" id="HJG-V2-mNI"/>
+                            <constraint firstItem="wcr-QW-odk" firstAttribute="leading" secondItem="ob1-KF-Gqw" secondAttribute="leading" id="JFq-TG-hbt"/>
+                            <constraint firstItem="wcr-QW-odk" firstAttribute="leading" secondItem="gK8-iz-6PE" secondAttribute="leading" id="bJZ-0E-w6J"/>
+                            <constraint firstItem="wcr-QW-odk" firstAttribute="top" secondItem="gK8-iz-6PE" secondAttribute="bottom" constant="16" id="cXP-Mb-AlG"/>
+                            <constraint firstItem="gK8-iz-6PE" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ddU-qb-3Q3"/>
+                            <constraint firstItem="gK8-iz-6PE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="x78-MI-cWz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="5JO-3I-Qoz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1071.2" y="109.29535232383809"/>
+            <point key="canvasLocation" x="1070.625" y="108.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zsi-0t-4Zc">
@@ -29,7 +55,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Lw-8x-ZPw" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kQW-1l-nQw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
