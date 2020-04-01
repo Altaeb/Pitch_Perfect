@@ -72,7 +72,33 @@
                     <view key="view" contentMode="scaleToFill" id="C4i-9s-0dp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8Zc-hR-709">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vPL-M7-yXg">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJl-uV-3Kc">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="623"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ZU-fB-JIL">
+                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="623"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ldN-7H-uUK" firstAttribute="trailing" secondItem="8Zc-hR-709" secondAttribute="trailing" id="CxK-kE-tJA"/>
+                            <constraint firstItem="8Zc-hR-709" firstAttribute="leading" secondItem="ldN-7H-uUK" secondAttribute="leading" id="MWm-ga-tYa"/>
+                            <constraint firstItem="ldN-7H-uUK" firstAttribute="bottom" secondItem="8Zc-hR-709" secondAttribute="bottom" id="qDX-um-end"/>
+                            <constraint firstItem="8Zc-hR-709" firstAttribute="top" secondItem="ldN-7H-uUK" secondAttribute="top" id="qh9-G0-UL3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ldN-7H-uUK"/>
                     </view>
                     <navigationItem key="navigationItem" id="CJz-MW-ZFr"/>
